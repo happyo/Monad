@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06094A2D3105BE5CEFE30075D9A4ECFC /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CCE50A9E0DEE41BCC60B7C90B74DC /* State.swift */; };
-		1D7D4BEFE413C1F34F3CEAC900313422 /* MonadExstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ACC8F577BB5C9E6A368DF48108A15 /* MonadExstension.swift */; };
+		0034C6652F6C89A2359DB25CA5B49CA0 /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECED2BCBCCA804408E65EC82023A546 /* Writer.swift */; };
+		122C0E09E0BD849F8BF07D1DB349868F /* Monad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7198D53EE5C86D32104CD87A682B01D /* Monad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FC7B6E3074C763BEBD239672B879FCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4D4BFD410A5FD7D5272CCB470B041D8E /* Monad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA3534E3CDF1FF0FC755BC7C09AB49C /* Monad-dummy.m */; };
-		5297A824852A31896A84191E0057B6C8 /* Monad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7198D53EE5C86D32104CD87A682B01D /* Monad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BF94423F20FE9D918CB1621D10AE9D5 /* Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBA4DAC5FC462E4134AF5AE3A384CA /* Monad.swift */; };
+		2E7C64908C3D41142123FC39E7C1AEE1 /* Monad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA3534E3CDF1FF0FC755BC7C09AB49C /* Monad-dummy.m */; };
 		846F108EF2617F0355A4051E3248F1C6 /* Pods-Monad_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14752B2217241AE2FC11C6BCB1121393 /* Pods-Monad_Example-dummy.m */; };
 		859BB7614472F56ACBD6D68F63AC7C7B /* Pods-Monad_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A3038F1F1B8B3282498B8A0D2598DD8 /* Pods-Monad_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8881D5BD58E11AD9089609F429982454 /* MonadExstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A48F7E63558B298220C8717130E638 /* MonadExstension.swift */; };
+		B6782ED471F6AD5E7FC664C0F4EB70B6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544C4E72012FFB0034073B39C9487313 /* State.swift */; };
+		BE20E7DBC2A013F191799C0B05BFBD68 /* Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF00E6BA8EAB779B74E14F9C6F4F3F3 /* Monad.swift */; };
 		C7FBD26E8903FF4AAC84397371DFEB10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CD03FD8FB8F50E8265EF57F5627894DE /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545E5160C75AE9DEBF93EE31E5B2D2B /* Reader.swift */; };
+		D41D2E94C9DEE41F4ADC0AE1E82D0E5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		D57CAA9E02ADFD94AF5BC8FBD23B7A80 /* Pods-Monad_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2ED85C7968B725F844C15111051D17 /* Pods-Monad_Tests-dummy.m */; };
-		F6CE2BB7CC74F313A91B20711B22D304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FD2E942D2CD6D30C9379F85D90C3EE88 /* Pods-Monad_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC440E19FA3DCF962111FC39D96C251 /* Pods-Monad_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -26,7 +28,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5AD7FDB3FCAA2B55396A5C42CFB316E6;
+			remoteGlobalIDString = B2AA5B6ADA4BB106CC28794066AFAFDE;
 			remoteInfo = Monad;
 		};
 /* End PBXContainerItemProxy section */
@@ -36,16 +38,14 @@
 		13FC6C2C3D8BB15580CDE366A333D9B4 /* Pods-Monad_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Monad_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		14752B2217241AE2FC11C6BCB1121393 /* Pods-Monad_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Monad_Example-dummy.m"; sourceTree = "<group>"; };
 		1747B79078D3B8D17DB361240FD6A5DE /* Pods-Monad_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Monad_Tests.modulemap"; sourceTree = "<group>"; };
-		1BDBA4DAC5FC462E4134AF5AE3A384CA /* Monad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Monad.swift; sourceTree = "<group>"; };
-		203ACC8F577BB5C9E6A368DF48108A15 /* MonadExstension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MonadExstension.swift; sourceTree = "<group>"; };
 		24EED3708FE6B4F023722B43B008AC2E /* Pods_Monad_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Monad_Example.framework; path = "Pods-Monad_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FCF6541EC04A124B6BEADA2039AEE2 /* Pods-Monad_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Monad_Tests-resources.sh"; sourceTree = "<group>"; };
 		2A3038F1F1B8B3282498B8A0D2598DD8 /* Pods-Monad_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Monad_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3B1CCE50A9E0DEE41BCC60B7C90B74DC /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		40BCFCF7926C07BAE5AE4FDD91887923 /* Pods-Monad_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Monad_Example-resources.sh"; sourceTree = "<group>"; };
 		42FF4EF91F77534BAB891C081E894B28 /* Pods-Monad_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Monad_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4B231539503C1CF768550603445C752C /* Pods-Monad_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Monad_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4B2ED85C7968B725F844C15111051D17 /* Pods-Monad_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Monad_Tests-dummy.m"; sourceTree = "<group>"; };
+		544C4E72012FFB0034073B39C9487313 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		5C0C9CC14F4ED81A6B94002ECB88FC52 /* Monad.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Monad.xcconfig; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6C4054D45106525EC253063DAB8BDD05 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,23 +57,27 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A81DD484AF523FE6C14A7A6FB2521A0 /* Monad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Monad.framework; path = Monad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC740ACD6DF6F586657EAAFD6D3BE88 /* Pods_Monad_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Monad_Tests.framework; path = "Pods-Monad_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A545E5160C75AE9DEBF93EE31E5B2D2B /* Reader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
 		A7198D53EE5C86D32104CD87A682B01D /* Monad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Monad-umbrella.h"; sourceTree = "<group>"; };
 		B8BC1C6B46533B0EA3304B8ED003EDB0 /* Pods-Monad_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Monad_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B8BF6F82DC6FAD1873C4A68C96953D28 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAC440E19FA3DCF962111FC39D96C251 /* Pods-Monad_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Monad_Example-umbrella.h"; sourceTree = "<group>"; };
+		CECED2BCBCCA804408E65EC82023A546 /* Writer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
 		D57345D648C889A43490B16DF2B121CC /* Pods-Monad_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Monad_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		DAF00E6BA8EAB779B74E14F9C6F4F3F3 /* Monad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Monad.swift; sourceTree = "<group>"; };
 		DC7F4B061761CC70FAD2A1B0E746FEE0 /* Monad-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Monad-prefix.pch"; sourceTree = "<group>"; };
 		ECA65A77753D53E9E8770279311A2F0B /* Pods-Monad_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Monad_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EF11DB9EA3466D18A1B5C766504702F4 /* Pods-Monad_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Monad_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F0A48F7E63558B298220C8717130E638 /* MonadExstension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MonadExstension.swift; sourceTree = "<group>"; };
 		FB5D9DE3B325DD533798EE39BECEB28F /* Pods-Monad_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Monad_Example.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5D4C20A872EEEF75C7AE2F8412FE6009 /* Frameworks */ = {
+		205DE66F96746552034C325405D69B19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6CE2BB7CC74F313A91B20711B22D304 /* Foundation.framework in Frameworks */,
+				D41D2E94C9DEE41F4ADC0AE1E82D0E5E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,23 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CB1523F11EC36F977170FFCF5EA7277 /* Monad */ = {
+		1D0E361600FEE3B5E6249B31819F2F24 /* Monad */ = {
 			isa = PBXGroup;
 			children = (
-				0DC0CC829E5B67F0371FF1768488F66C /* Exstension */,
-				75E4CD27604AEE82179CE346FD47808A /* Monad */,
+				DAF00E6BA8EAB779B74E14F9C6F4F3F3 /* Monad.swift */,
+				A545E5160C75AE9DEBF93EE31E5B2D2B /* Reader.swift */,
+				544C4E72012FFB0034073B39C9487313 /* State.swift */,
+				CECED2BCBCCA804408E65EC82023A546 /* Writer.swift */,
 			);
 			name = Monad;
 			path = Monad;
-			sourceTree = "<group>";
-		};
-		0DC0CC829E5B67F0371FF1768488F66C /* Exstension */ = {
-			isa = PBXGroup;
-			children = (
-				203ACC8F577BB5C9E6A368DF48108A15 /* MonadExstension.swift */,
-			);
-			name = Exstension;
-			path = Exstension;
 			sourceTree = "<group>";
 		};
 		2AF407284B10D0C6FF298A10C26A6B21 /* Pods-Monad_Example */ = {
@@ -151,16 +148,6 @@
 			path = "Target Support Files/Pods-Monad_Tests";
 			sourceTree = "<group>";
 		};
-		75E4CD27604AEE82179CE346FD47808A /* Monad */ = {
-			isa = PBXGroup;
-			children = (
-				1BDBA4DAC5FC462E4134AF5AE3A384CA /* Monad.swift */,
-				3B1CCE50A9E0DEE41BCC60B7C90B74DC /* State.swift */,
-			);
-			name = Monad;
-			path = Monad;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +181,15 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		987665CB1319BD2AD00F446B1E8E334A /* Exstension */ = {
+			isa = PBXGroup;
+			children = (
+				F0A48F7E63558B298220C8717130E638 /* MonadExstension.swift */,
+			);
+			name = Exstension;
+			path = Exstension;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +207,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		CE2BE87E146B37099D7B83B2798FE7A9 /* Monad */ = {
+			isa = PBXGroup;
+			children = (
+				987665CB1319BD2AD00F446B1E8E334A /* Exstension */,
+				1D0E361600FEE3B5E6249B31819F2F24 /* Monad */,
+			);
+			name = Monad;
+			path = Monad;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +228,7 @@
 		D54369EF1EF68D32BC8CE8801E3E05E3 /* Monad */ = {
 			isa = PBXGroup;
 			children = (
-				0CB1523F11EC36F977170FFCF5EA7277 /* Monad */,
+				CE2BE87E146B37099D7B83B2798FE7A9 /* Monad */,
 				83E1373E77D31F86DC6946A81E7965B6 /* Support Files */,
 			);
 			name = Monad;
@@ -242,19 +248,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		261D7617070D672B45828404CC5C47BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				122C0E09E0BD849F8BF07D1DB349868F /* Monad-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF97EEEC3288A5446F9DBFC10A2850AA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				859BB7614472F56ACBD6D68F63AC7C7B /* Pods-Monad_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DC8422D0B2A26D297E05CFA28FC20547 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5297A824852A31896A84191E0057B6C8 /* Monad-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,13 +293,13 @@
 			productReference = 24EED3708FE6B4F023722B43B008AC2E /* Pods_Monad_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5AD7FDB3FCAA2B55396A5C42CFB316E6 /* Monad */ = {
+		B2AA5B6ADA4BB106CC28794066AFAFDE /* Monad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53831D48A0F5AA6F7D4B0350D46722F0 /* Build configuration list for PBXNativeTarget "Monad" */;
+			buildConfigurationList = 0036A0E17718DC0450518E913BDFB418 /* Build configuration list for PBXNativeTarget "Monad" */;
 			buildPhases = (
-				725827D496BE40F3F337279EF93ADDC8 /* Sources */,
-				5D4C20A872EEEF75C7AE2F8412FE6009 /* Frameworks */,
-				DC8422D0B2A26D297E05CFA28FC20547 /* Headers */,
+				43C312BA34B0DF0E8B1FBB7317DE1B88 /* Sources */,
+				205DE66F96746552034C325405D69B19 /* Frameworks */,
+				261D7617070D672B45828404CC5C47BE /* Headers */,
 			);
 			buildRules = (
 			);
@@ -342,7 +348,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5AD7FDB3FCAA2B55396A5C42CFB316E6 /* Monad */,
+				B2AA5B6ADA4BB106CC28794066AFAFDE /* Monad */,
 				20A088C9DFFDAAE89A21F60C13731A5F /* Pods-Monad_Example */,
 				C0982C6B1E1043AFF290ED6715D565C8 /* Pods-Monad_Tests */,
 			);
@@ -358,22 +364,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43C312BA34B0DF0E8B1FBB7317DE1B88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E7C64908C3D41142123FC39E7C1AEE1 /* Monad-dummy.m in Sources */,
+				BE20E7DBC2A013F191799C0B05BFBD68 /* Monad.swift in Sources */,
+				8881D5BD58E11AD9089609F429982454 /* MonadExstension.swift in Sources */,
+				CD03FD8FB8F50E8265EF57F5627894DE /* Reader.swift in Sources */,
+				B6782ED471F6AD5E7FC664C0F4EB70B6 /* State.swift in Sources */,
+				0034C6652F6C89A2359DB25CA5B49CA0 /* Writer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68D0A246F3790D0DAC6E086464BAFA6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D57CAA9E02ADFD94AF5BC8FBD23B7A80 /* Pods-Monad_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		725827D496BE40F3F337279EF93ADDC8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D4BFD410A5FD7D5272CCB470B041D8E /* Monad-dummy.m in Sources */,
-				7BF94423F20FE9D918CB1621D10AE9D5 /* Monad.swift in Sources */,
-				1D7D4BEFE413C1F34F3CEAC900313422 /* MonadExstension.swift in Sources */,
-				06094A2D3105BE5CEFE30075D9A4ECFC /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,13 +391,13 @@
 		4695E557E0B608C802C3EA101FDCE9BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Monad;
-			target = 5AD7FDB3FCAA2B55396A5C42CFB316E6 /* Monad */;
+			target = B2AA5B6ADA4BB106CC28794066AFAFDE /* Monad */;
 			targetProxy = 322B5AF62593357E15057923B22795AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		220AB1BC60F5BC0C45F96268366A1338 /* Debug */ = {
+		1136A793786920F7131E82965145CA76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C0C9CC14F4ED81A6B94002ECB88FC52 /* Monad.xcconfig */;
 			buildSettings = {
@@ -411,14 +419,14 @@
 				PRODUCT_NAME = Monad;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		4B38551AC108D17576B18EF57A9D6FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -446,37 +454,6 @@
 				PRODUCT_NAME = Pods_Monad_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7E1855ED69A0BAF7A69DEB392A97FCA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C0C9CC14F4ED81A6B94002ECB88FC52 /* Monad.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Monad/Monad-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Monad/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Monad/Monad.modulemap";
-				PRODUCT_NAME = Monad;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -570,6 +547,37 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDAD0382B55947924EABEE1A6CC3BB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0C9CC14F4ED81A6B94002ECB88FC52 /* Monad.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Monad/Monad-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Monad/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Monad/Monad.modulemap";
+				PRODUCT_NAME = Monad;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -707,20 +715,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0036A0E17718DC0450518E913BDFB418 /* Build configuration list for PBXNativeTarget "Monad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDAD0382B55947924EABEE1A6CC3BB17 /* Debug */,
+				1136A793786920F7131E82965145CA76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D796F128659FE2D43AB91CF1688A32CA /* Debug */,
 				827269710C98D60C14D46BC6AF9BF728 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		53831D48A0F5AA6F7D4B0350D46722F0 /* Build configuration list for PBXNativeTarget "Monad" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				220AB1BC60F5BC0C45F96268366A1338 /* Debug */,
-				7E1855ED69A0BAF7A69DEB392A97FCA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

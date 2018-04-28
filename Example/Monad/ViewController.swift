@@ -88,17 +88,17 @@ func addOne(_ n : Int) -> Int {
 class Product: Monoid {
     var value: Double
     
-    init(_ value : Double) {
+    required init(_ value : Double) {
         self.value = value
     }
-    typealias A = Product
     
-    func mempty() -> Product.A {
-        return Product(1)
+    static func mempty() -> Self {
+        return self.init(1)
     }
     
-    func mappend(_ a: Product) -> Product {
-        return Product(self.value * a.value)
+    func mappend(_ a: Product) -> Self {
+        let result = type(of: self).init(value * a.value)
+        return result
     }
 }
 

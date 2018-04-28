@@ -9,9 +9,8 @@
 import Foundation
 
 public protocol Monoid {
-    associatedtype A
-    func mempty() -> A
-    func mappend(_ a : A) -> A
+    static func mempty() -> Self
+    func mappend(_ a : Self) -> Self
 }
 
 protocol Functor {
