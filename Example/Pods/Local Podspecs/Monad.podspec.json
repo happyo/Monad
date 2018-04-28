@@ -1,0 +1,22 @@
+{
+  "name": "Monad",
+  "version": "0.1.0",
+  "summary": "A short description of Monad.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/happyo/Monad",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "happyo": "584508338@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/happyo/Monad.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Monad/**/*"
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Monad_Example' do
+  pod 'Monad', :path => '../'
+
+  target 'Monad_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
