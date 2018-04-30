@@ -15,14 +15,18 @@ public struct Writer<W, A>: Monad where W: Monoid{
     typealias FB = Writer<W, B>
     typealias FF = Writer<W, (A) -> B>
     
-    let runWriter : (A, W)
+    let writer : (A, W)
     
-    init(_ writer : (A, W)) {
-        self.runWriter = writer
+    public init(_ writer : (A, W)) {
+        self.writer = writer
+    }
+    
+    public func runWriter() -> (A, W) {
+        return self.writer
     }
 
     func fmap<B>(_ f: @escaping (A) -> B) -> Writer<W, Writer.B> {
-        let (a, w) = self.runWriter
+        let (a, w) = self.writer
         return Writer<W, Writer.B>((f(a), w))
     }
     
@@ -31,8 +35,8 @@ public struct Writer<W, A>: Monad where W: Monoid{
     }
     
     public func apply<B>(_ ff: Writer<W, (A) -> B>) -> Writer<W, B> {
-        let (a, w) = self.runWriter
-        let (f, ww) = ff.runWriter
+        let (a, w) = self.writer
+        let (f, ww) = ff.writer
         return Writer<W, B>((f(a), w.mappend(ww)))
     }
     
@@ -41,8 +45,8 @@ public struct Writer<W, A>: Monad where W: Monoid{
     }
     
     public func flatten<B>(_ f: @escaping (A) -> Writer<W, B>) -> Writer<W, B> {
-        let (x, v) = self.runWriter
-        let (y, vv) = f(x).runWriter
+        let (x, v) = self.writer
+        let (y, vv) = f(x).writer
         return Writer<W, B>((y, v.mappend(vv)))
     }
 }

@@ -18,8 +18,6 @@ extension Array: Functor {
     }
 }
 
-
-
 extension Optional: Functor {
     public typealias A = Wrapped
     public typealias B = Any
@@ -54,5 +52,15 @@ extension Optional: Monad {
     
     public func flatten<B>(_ f: @escaping (Wrapped) -> Optional<B>) -> Optional<B> {
         return self.flatMap(f)
+    }
+}
+
+extension String: Monoid {
+    public static func mempty() -> String {
+        return ""
+    }
+    
+    public func mappend(_ a: String) -> String {
+        return self + a
     }
 }

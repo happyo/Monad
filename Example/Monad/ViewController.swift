@@ -34,14 +34,35 @@ class ViewController: UIViewController {
             return pop()
         }).runState()([1,2,3]))
         
+        print(moveLeftTwice(2).runWriter())
+        
+        print(readLen().runReader()(Array("123123")))
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+}
+
+func readLen() -> Reader<Array<Any>, Int> {
+    return Reader<Array<Any>, Int>({ (xs: Array) -> Int in
+        return xs.count
+    })
+}
+
+func moveLeftTwice(_ a : Int) -> Writer<String, Int> {
+    return left(a).flatten({ a1 in
+        left(a1)
+    })
+}
+
+func left(_ a : Int) -> Writer<String, Int> {
+    return Writer<String, Int>((a - 1, "move left \n"))
+}
+
+func right(_ a : Int) -> Writer<String, Int> {
+    return Writer<String, Int>((a + 1, "move right \n"))
 }
 
 func pop() -> State<Stack, Int> {
