@@ -64,3 +64,18 @@ extension String: Monoid {
         return self + a
     }
 }
+
+extension Optional: Alternative {
+    static func empty() -> Optional<Wrapped> {
+        return Optional.none
+    }
+    
+    public func alternative(_ fa: Optional<Wrapped>) -> Optional<Wrapped> {
+        switch self {
+        case .none:
+            return fa
+        default:
+            return self
+        }
+    }
+}

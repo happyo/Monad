@@ -26,10 +26,24 @@ protocol Applicative: Functor {
     associatedtype FF
     
     static func pure(_ a : A) -> FA
+    
+    // same ap in Haskell
     func apply(_ ff : FF) -> FB
 }
 
 protocol Monad: Applicative {
     static func returnM(_ a : A) -> FA
+    
+    // same >>= in Haskell
     func flatten(_ f : @escaping (A) -> FB) -> FB
 }
+
+protocol Alternative {
+    associatedtype FA
+    
+    static func empty() -> FA
+    
+    // same <|> in Haskell
+    func alternative(_ fa: FA) -> FA
+}
+
