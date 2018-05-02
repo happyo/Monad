@@ -38,7 +38,9 @@ class ViewController: UIViewController {
         
         print(readLen().runReader()(Array("123123")))
         
-        print(Optional.none.alternative(Optional.none).alternative(Optional(2)).alternative(Optional.none)!)
+    print(Optional.none.alternative(Optional.none).alternative(Optional(2)).alternative(Optional.none)!)
+        
+        print(Optional<Int>.none.many())
     }
     
     override func didReceiveMemoryWarning() {

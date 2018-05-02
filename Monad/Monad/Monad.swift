@@ -38,12 +38,18 @@ protocol Monad: Applicative {
     func flatten(_ f : @escaping (A) -> FB) -> FB
 }
 
-protocol Alternative {
+protocol Alternative: Monad {
+    // f a
     associatedtype FA
+    // f [a]
+    associatedtype FAL
     
     static func empty() -> FA
     
     // same <|> in Haskell
     func alternative(_ fa: FA) -> FA
+    
+    func some() -> FAL
+    func many() -> FAL
 }
 

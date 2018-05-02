@@ -78,4 +78,16 @@ extension Optional: Alternative {
             return self
         }
     }
+    
+    public func many() -> Optional<[Wrapped]> {
+        return self.some().alternative(Optional<[Wrapped]>.pure([]))
+    }
+    
+    public func some() -> Optional<[Wrapped]> {
+        return self.flatten({ (p) -> Optional<[Wrapped]> in
+            self.many().flatten({ (pl) -> [Wrapped] in
+                return pl + [p]
+            })
+        })
+    }
 }
