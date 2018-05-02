@@ -19,7 +19,7 @@ protocol Functor {
     associatedtype FA
     associatedtype FB
     
-    func fmap<B>(_ f : @escaping (A) -> B) -> FB
+    func fmap(_ f : @escaping (A) -> B) -> FB
 }
 
 protocol Applicative: Functor {

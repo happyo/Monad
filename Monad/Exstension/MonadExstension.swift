@@ -24,7 +24,7 @@ extension Optional: Functor {
     public typealias FA = Optional<A>
     public typealias FB = Optional<B>
     
-    public func fmap<B>(_ f: @escaping (A) -> B) -> FB {
+    public func fmap<B>(_ f: @escaping (Wrapped) -> B) -> Optional<B> {
         return self.map(f)
     }
 }
@@ -84,8 +84,8 @@ extension Optional: Alternative {
     }
     
     public func some() -> Optional<[Wrapped]> {
-        return self.flatten({ (p) -> Optional<[Wrapped]> in
-            self.many().flatten({ (pl) -> [Wrapped] in
+        return self.flatten({ p in
+            self.many().fmap({ pl in
                 return pl + [p]
             })
         })

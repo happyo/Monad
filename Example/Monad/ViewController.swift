@@ -41,11 +41,21 @@ class ViewController: UIViewController {
     print(Optional.none.alternative(Optional.none).alternative(Optional(2)).alternative(Optional.none)!)
         
         print(Optional<Int>.none.many())
+        
+        print(satisfy(isDigit).many().runParser()("123abc"))
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+func isDigit(_ c : Character) -> Bool {
+    if "0"..."9" ~= c {
+        return true
+    } else {
+        return false
     }
 }
 

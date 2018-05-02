@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Parser<A>: Alternative {
+public class Parser<A>: Alternative {
     typealias B = Any
     typealias FA = Parser<A>
     typealias FB = Parser<B>
@@ -53,7 +53,7 @@ class Parser<A>: Alternative {
         })
     }
     
-    public func empty() -> Parser<A> {
+    static func empty() -> Parser<A> {
         return Parser<A>({ _ in
             Optional.none
         })
@@ -64,7 +64,7 @@ class Parser<A>: Alternative {
             if let just = self.runParser()(s) {
                 return just
             } else {
-                return Optional.none
+                return fa.runParser()(s)
             }
         })
     }
@@ -76,11 +76,7 @@ class Parser<A>: Alternative {
     public func flatten<B>(_ f: @escaping (A) -> Parser<B>) -> Parser<B> {
         return Parser<B>({ s in
             if let (a, ss) = self.runParser()(s) {
-                if let just = f(a).runParser()(ss) {
-                    return just
-                } else {
-                    return Optional.none
-                }
+                return f(a).runParser()(ss)
             } else {
                 return Optional.none
             }
@@ -93,9 +89,29 @@ class Parser<A>: Alternative {
     
     public func some() -> Parser<[A]> {
         return self.flatten({ p in
-            self.many().flatten({ pl in
-                return pl + [p]
+            self.many().fmap({ pl in
+                return [p] + pl
             })
         })
     }
+}
+
+public func satisfy(_ f : @escaping (Character) -> Bool) -> Parser<Character> {
+    return Parser<Character>({ (s) -> Optional<(Character, String)> in
+        if s.isEmpty {
+            return Optional.none
+        } else {
+            if f(s.first!) {
+                return Optional((s.first!, String(s.dropFirst())))
+            } else {
+                return Optional.none
+            }
+        }
+    })
+}
+
+public func char(_ c : Character) -> Parser<Character> {
+    return satisfy({ cc in
+        c == cc
+    })
 }
