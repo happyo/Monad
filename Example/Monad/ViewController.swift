@@ -42,7 +42,12 @@ class ViewController: UIViewController {
         
         print(Optional<Int>.none.many())
         
-        print(satisfy(isDigit).many().runParser()("123abc"))
+        print(satisfy(isDigit).many().runParser()("123345"))
+        
+        print(cellContent().runParser()("123\n123"))
+        
+        print(cells().runParser()("123,1234,123,234\n123,234"))
+         
     }
     
     override func didReceiveMemoryWarning() {

@@ -33,7 +33,7 @@ public class Parser<A>: Alternative {
         })
     }
     
-    static func pure(_ a: A) -> Parser<A> {
+    public static func pure(_ a: A) -> Parser<A> {
         return Parser<A>({ (s) -> Optional<(A, String)> in
             Optional((a, s))
         })
@@ -69,7 +69,7 @@ public class Parser<A>: Alternative {
         })
     }
     
-    static func returnM(_ a: A) -> Parser<A> {
+    public static func returnM(_ a: A) -> Parser<A> {
         return self.pure(a)
     }
     
@@ -83,6 +83,27 @@ public class Parser<A>: Alternative {
         })
     }
     
+    // >>
+    public func flattenIgnore<B>(_ b : Parser<B>) -> Parser<B> {
+        return self.flatten({ _ in
+            b
+        })
+    }
+    
+//    public func flattenLeft<B>(_ b : Parser<B>) -> Parser<A> {
+//        return Parser<A>({ s in
+//            if let (a, ss) = self.runParser()(s) {
+//                if let (_, sss) = b.runParser()(ss) {
+//                    return (a, sss)
+//                } else {
+//                    return Optional.none
+//                }
+//            } else {
+//                return Optional.none
+//            }
+//        })
+//    }
+    
     public func many() -> Parser<[A]> {
         return self.some().alternative(Parser<[A]>.pure([]))
     }
@@ -94,6 +115,16 @@ public class Parser<A>: Alternative {
             })
         })
     }
+    
+//    public func eof() -> Parser<A> {
+//        return Parser<A>({ s in
+//            if s.isEmpty {
+//                return Optional.none
+//            } else {
+//                return self.runParser()(s)
+//            }
+//        })
+//    }
 }
 
 public func satisfy(_ f : @escaping (Character) -> Bool) -> Parser<Character> {
@@ -113,5 +144,23 @@ public func satisfy(_ f : @escaping (Character) -> Bool) -> Parser<Character> {
 public func char(_ c : Character) -> Parser<Character> {
     return satisfy({ cc in
         c == cc
+    })
+}
+
+public func noneOf(xs: String) -> Parser<Character>
+{
+    return satisfy { c in
+        !xs.contains(c)
+    }
+}
+
+
+public func eof<T>(_ a : T) -> Parser<T> {
+    return Parser<T>({ s in
+        if s.isEmpty {
+            return Optional.none
+        } else {
+            return (a, s)
+        }
     })
 }
