@@ -44,10 +44,9 @@ class ViewController: UIViewController {
         
         print(satisfy(isDigit).many().runParser()("123345"))
         
-        print(cellContent().runParser()("123\n123"))
+//        print(cells().runParser()("123,1234,123,234"))
+        print(csvFile().runParser()("123,123,234\n123,234\n345\n"))
         
-        print(cells().runParser()("123,1234,123,234\n123,234"))
-         
     }
     
     override func didReceiveMemoryWarning() {

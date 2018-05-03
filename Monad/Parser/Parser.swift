@@ -154,13 +154,14 @@ public func noneOf(xs: String) -> Parser<Character>
     }
 }
 
-
-public func eof<T>(_ a : T) -> Parser<T> {
-    return Parser<T>({ s in
+public func eof() -> Parser<String> {
+    return Parser<String>({ s in
         if s.isEmpty {
             return Optional.none
         } else {
-            return (a, s)
+            return ("end of file ", s)
         }
     })
 }
+
+

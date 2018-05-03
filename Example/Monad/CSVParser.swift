@@ -24,13 +24,13 @@ func line() -> Parser<[String]> {
 func cells() -> Parser<[String]> {
     return cellContent().flatten({ first in
         remainingCells().flatten({ next in
-            Parser<[String]>.returnM([first] + next)
+            Parser.returnM([first] + next)
             })
     })
 }
 
 func remainingCells() -> Parser<[String]> {
-    return char(",").flattenIgnore(cells().alternative(Parser.pure([])))
+    return char(",").flattenIgnore(cells()).alternative(Parser.pure([]))
 }
 
 func eol() -> Parser<Character> {
